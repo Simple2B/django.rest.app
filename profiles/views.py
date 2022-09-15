@@ -11,7 +11,6 @@ class UserProfileViewSet(viewsets.ModelViewSet):
     queryset = UserProfile.objects.all()
     serializer_class = UserProfileSerializer
     permission_classes = (IsAuthenticated,)
-    authentication_classes = (SessionAuthentication, BasicAuthentication)
 
 
 class RegisterUserProfileViewSet(viewsets.ModelViewSet):
