@@ -1,5 +1,4 @@
 import pytest
-import requests
 from profiles.models import UserProfile
 from posts.models import Post
 from posts.views import PostViewSet
