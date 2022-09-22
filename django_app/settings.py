@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = "django-insecure-u%_&l3(g753^at6o(d&_&wnhvw)bpa9*&6z=u)%l-1ji84dze-"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -122,22 +122,22 @@ LOGGING = {
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-if os.environ.get('DJANGO_ENV') == 'development':
+if config('DJANGO_ENV') == 'development':
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
-elif os.environ.get('DJANGO_ENV') == 'production':
+elif config('DJANGO_ENV') == 'production':
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': os.environ.get('POSTGRES_DB'),
-            'USER': os.environ.get('POSTGRES_USER'),
-            'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
-            'HOST': 'db',
-            'PORT': int(os.environ.get('LOCAL_DB_PORT')),
+            'NAME': config('POSTGRES_DB'),
+            'USER': config('POSTGRES_USER'),
+            'PASSWORD': config('POSTGRES_PASSWORD'),
+            'HOST': 'localhost',
+            'PORT': int(config('LOCAL_DB_PORT')),
         }
     }
 
