@@ -9,6 +9,7 @@
 **/.toolstarget
 **/.vs
 **/.vscode
+**/.sqlite3
 **/*.*proj.user
 **/*.dbmdl
 **/*.jfm
@@ -25,4 +26,3 @@
 **/values.dev.yaml
 README.md
 poetry.toml
-**/.sqlite3
