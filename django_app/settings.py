@@ -136,7 +136,7 @@ elif config('DJANGO_ENV') == 'production':
             'NAME': config('POSTGRES_DB'),
             'USER': config('POSTGRES_USER'),
             'PASSWORD': config('POSTGRES_PASSWORD'),
-            'HOST': 'localhost',
+            'HOST': 'db',
             'PORT': int(config('LOCAL_DB_PORT')),
         }
     }
