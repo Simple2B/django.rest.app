@@ -4,7 +4,7 @@ from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 from .models import Post
 from .serializer import PostSerializer
-from .logger import *
+from .logger import logger
 
 
 class PostViewSet(viewsets.ModelViewSet):
