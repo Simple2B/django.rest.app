@@ -5,7 +5,7 @@ from rest_framework.authentication import BasicAuthentication, SessionAuthentica
 
 from .models import UserProfile
 from .serializer import UserProfileSerializer, RegisterUserProfileSerializer
-from .logger import *
+from .logger import logger
 
 
 class UserProfileViewSet(viewsets.ModelViewSet):
